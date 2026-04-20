@@ -1,0 +1,84 @@
+name: BetterFactions
+main: com.betterfactions.BetterFactionsPlugin
+version: 2.0.0
+api-version: 1.21
+author: SuperPitpit
+description: Advanced modular Factions plugin (chat, claims, map, power, raid, diplomacy).
+
+commands:
+  faction:
+    description: Commande principale des factions
+    usage: /faction <subcommand>
+    aliases: [f, fac]
+    permission: betterfactions.command.faction
+
+  factionadmin:
+    description: Commandes administrateur pour les factions
+    usage: /factionadmin <subcommand>
+    permission: betterfactions.admin
+
+  fclaim:
+    description: Claim / unclaim des chunks
+    usage: /fclaim <claim|unclaim>
+    permission: betterfactions.command.claim
+
+  fmap:
+    description: Affiche la mini-map ASCII des claims
+    usage: /fmap
+    permission: betterfactions.command.map
+
+  fraid:
+    description: Lance un raid contre une faction
+    usage: /fraid <faction>
+    permission: betterfactions.command.raid
+
+  fc:
+    description: Active le chat faction
+    usage: /fc
+    permission: betterfactions.command.chat
+
+  fa:
+    description: Active le chat alliance
+    usage: /fa
+    permission: betterfactions.command.chat
+
+  fg:
+    description: Active le chat global
+    usage: /fg
+    permission: betterfactions.command.chat
+
+permissions:
+  betterfactions.*:
+    description: Toutes les permissions BetterFactions
+    default: op
+    children:
+      betterfactions.command.faction: true
+      betterfactions.command.claim: true
+      betterfactions.command.map: true
+      betterfactions.command.raid: true
+      betterfactions.command.chat: true
+      betterfactions.admin: true
+
+  betterfactions.command.faction:
+    description: Utiliser /faction
+    default: true
+
+  betterfactions.command.claim:
+    description: Utiliser /fclaim
+    default: true
+
+  betterfactions.command.map:
+    description: Utiliser /fmap
+    default: true
+
+  betterfactions.command.raid:
+    description: Utiliser /fraid
+    default: true
+
+  betterfactions.command.chat:
+    description: Utiliser /fc, /fa, /fg
+    default: true
+
+  betterfactions.admin:
+    description: Permissions administrateur BetterFactions
+    default: op

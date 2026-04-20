@@ -1,0 +1,41 @@
+betterfactions-modules:
+  chat: true
+  claims: true
+  map: true
+  power: true
+  raid: true
+
+chat:
+  global-format: "§7[%faction%§7] §f%player%§7: §f%message%"
+  faction-format: "§a[Faction] §6%player%§7: §f%message%"
+  alliance-format: "§b[Alliance] §6%player%§7: §f%message%"
+
+  # Si tu veux forcer un format même sans faction
+  no-faction-prefix: "§a[§aWilderness§a] "
+
+fmap:
+  radius: 4          # rayon autour du joueur (4 => grille 9x9)
+  claim-symbol: "■"
+  wilderness-symbol: "□"
+  self-symbol: "◆"
+  claim-color: "§a"
+  wilderness-color: "§7"
+  self-color: "§e"
+
+raid:
+  enabled: true
+  shield-duration-minutes: 60      # durée du shield après un raid
+  max-concurrent-raids-per-faction: 1
+
+power:
+  enabled: true
+  base-max-power: 10
+  power-per-member: 5
+  death-penalty: 2
+  regen-interval-seconds: 60
+  regen-amount: 1
+
+claims:
+  max-claims-per-faction: 50
+  allow-build-outside-claims: true
+  deny-build-in-others-claims: true
